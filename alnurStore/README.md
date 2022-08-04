@@ -43,4 +43,23 @@
         1. Add to home component
         2. Add ts
         3. Add html
-        4. Add css                    
+        4. Add css    
+
+8. Equipment Page
+    1. Add method to equipment service
+    2. Generate Equipment Page component
+        1. Add Route
+        2. Add ts
+        3. Add html
+        4. Add css                        
+
+9. Cart Page
+    1. Create CartItem Model
+    2. Create Cart Model
+    3. Generate Cart Service
+    4. Add to Cart Button in Equipment Page
+    5. Generate Cart Page Component
+        1. Add Route
+        2. Add ts
+        3. Add html
+        4. Add css

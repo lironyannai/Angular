@@ -1,4 +1,5 @@
 import { Equipment } from './app/shared/models/Equipment';
+import { Tag } from './app/shared/models/Tags';
 
 export const sample_equipments: Equipment[] = [
     {
@@ -10,7 +11,7 @@ export const sample_equipments: Equipment[] = [
         origins: ['Germany'],
         stars: 4.0,
         imageUrl: 'assets/Equipments/מטף אבקה 1 ק״ג.jpg',
-        tags: ['Home'],
+        tags: ["Houses & Buildings", 'Powder', '1 Kg', 'Cars & Trucks'],
     }
     ,
     {
@@ -22,7 +23,7 @@ export const sample_equipments: Equipment[] = [
         origins: ['Germany'],
         stars: 4.0,
         imageUrl: 'assets/Equipments/מטף אבקה 2 ק״ג.jpg',
-        tags: ['Home'],
+        tags: ["Houses & Buildings", 'Powder', '2 Kg', 'Cars & Trucks'],
     },
     {
         id: '3',
@@ -33,7 +34,7 @@ export const sample_equipments: Equipment[] = [
         origins: ['Germany'],
         stars: 4.0,
         imageUrl: 'assets/Equipments/מטף אבקה 3 ק״ג.jpg',
-        tags: ['Home'],
+        tags: ["Houses & Buildings", 'Powder', '3 Kg', 'Cars & Trucks'],
     },
     {
         id: '4',
@@ -44,7 +45,7 @@ export const sample_equipments: Equipment[] = [
         origins: ['Germany'],
         stars: 4.0,
         imageUrl: 'assets/Equipments/מטף אבקה 6 ק״ג.jpg',
-        tags: ['Home'],
+        tags: ["Houses & Buildings", "Office", "Powder", "6 Kg", "Cars & Trucks"],
     },
     {
         id: '5',
@@ -55,7 +56,7 @@ export const sample_equipments: Equipment[] = [
         origins: ['Germany'],
         stars: 4.0,
         imageUrl: 'assets/Equipments/מטף כיבוי אש גז הלוקרבון 1 ק״ג.jpg',
-        tags: ['Home'],
+        tags: ["Houses & Buildings", "Halo - Carbon", "Carbon", "1 Kg", "Electornics Devices"],
     },
     {
         id: '6',
@@ -66,7 +67,7 @@ export const sample_equipments: Equipment[] = [
         origins: ['Germany'],
         stars: 4.0,
         imageUrl: 'assets/Equipments/מטף כיבוי אש גז הלוקרבון 3 ק״ג.jpg',
-        tags: ['Home'],
+        tags: ["Houses & Buildings", "Halo - Carbon", "Carbon", "3 Kg", "Electornics Devices", "Cars & Trucks"],
     },
     {
         id: '7',
@@ -77,7 +78,7 @@ export const sample_equipments: Equipment[] = [
         origins: ['Germany'],
         stars: 4.0,
         imageUrl: 'assets/Equipments/מטף כיבוי אש גז הלוקרבון 6 ק״ג.jpg',
-        tags: ['Home'],
+        tags: ["Houses & Buildings", "Halo - Carbon", "Carbon", "6 Kg", "Electornics Devices", "Office"],
     },
     {
         id: '8',
@@ -88,7 +89,7 @@ export const sample_equipments: Equipment[] = [
         origins: ['Germany'],
         stars: 4.0,
         imageUrl: 'assets/Equipments/מטף כיבוי אש קצף 9 ליטר.jpg',
-        tags: ['Home'],
+        tags: ["9 Liter", "Foam", "Factories"],
     },
     {
         id: '9',
@@ -99,7 +100,7 @@ export const sample_equipments: Equipment[] = [
         origins: ['Germany'],
         stars: 4.0,
         imageUrl: 'assets/Equipments/מטף קצף 0.5 ק״ג.jpg',
-        tags: ['Home'],
+        tags: ["Foam", "0.5 Liter", "Kitchens", "Factories", "Office"],
     },
     {
         id: '10',
@@ -110,7 +111,7 @@ export const sample_equipments: Equipment[] = [
         origins: ['Germany'],
         stars: 4.0,
         imageUrl: 'assets/Equipments/מטף קצף 6 ליטר ייעודי למטבחים.jpg',
-        tags: ['Home'],
+        tags: ["Foam", "6 Liter", "Factories", "Kitchens"],
     },
     {
         id: '11',
@@ -121,7 +122,7 @@ export const sample_equipments: Equipment[] = [
         origins: ['Germany'],
         stars: 4.0,
         imageUrl: 'assets/Equipments/מטף קצף 6 ליטר למטבחים.jpg',
-        tags: ['Home'],
+        tags: ["Kitchens", "Factories", "6 Liter", "Foam"],
     },
     {
         id: '12',
@@ -132,5 +133,20 @@ export const sample_equipments: Equipment[] = [
         origins: ['Germany'],
         stars: 4.0,
         imageUrl: 'assets/Equipments/מטף קצף 6 ק״ג לכיבוי סוללות ליתיום.jpg',
-        tags: ['Home'],
+        tags: ["Factories", "6 Kg", "6 Liter", "Electornics Devices"],
     }]
+
+export const sample_tags: Tag[] = [
+    { name: 'All', count: 12 },
+    { name: 'Powder', count: 4 },
+    { name: 'Carbon', count: 3 },
+    { name: 'Foam', count: 4 },
+    { name: 'Kitchens', count: 3 },
+    { name: 'Cars & Trucks', count: 5 },
+    { name: 'Office', count: 3 },
+    { name: 'Factories', count: 5 },
+    { name: 'Electornics Devices', count: 4 },
+    { name: 'Houses & Buildings', count: 7 },
+
+
+]
