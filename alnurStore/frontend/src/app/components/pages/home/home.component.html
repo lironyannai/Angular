@@ -1,0 +1,37 @@
+<app-search></app-search>
+<ul>
+    <li *ngFor="let equipment of equipments">
+        <a routerLink="/equipment/{{equipment.id}}">
+            <img [src]="equipment.imageUrl" [alt]="equipment.name" />
+            <div class="content">
+                <div class="name">
+                    {{equipment.name}}
+                </div>
+                <span class="favorite {{equipment.favorite? '':'not'}}">
+                    🧯️
+                </span>
+                <div class="stars">
+                    <star-rating [value]="equipment.stars" [totalstars]="5" checkedcolor="red" uncheckedcolor="black"
+                        size="22px" [readonly]="true">
+                    </star-rating>
+                </div>
+                <div class="product-item-footer">
+                    <div class="origins">
+                        <span *ngFor="let origin of equipment.origins">
+                            {{origin}}
+                        </span>
+                    </div>
+                    <div class="expiration-time">
+                        <span>⏰</span>
+                        {{equipment.expirationTime}}
+                    </div>
+                    <div class="price">
+                        <span>
+                            {{equipment.price | currency}}
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </li>
+</ul>
