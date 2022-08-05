@@ -16,7 +16,11 @@ export class EquipmentPageComponent implements OnInit {
     private cartService: CartService, private router: Router) {
     activatedRoute.params.subscribe((params) => {
       if (params.id)
-        this.equipment = equipmentService.getEquipmentById(params.id);
+        equipmentService.getEquipmentById(params.id).subscribe(serverEquipment => {
+          this.equipment = serverEquipment;
+        });
+
+
     })
   }
 

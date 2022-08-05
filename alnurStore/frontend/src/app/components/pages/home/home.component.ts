@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
 import { EquipmentService } from 'src/app/services/equipment.service';
 import { Equipment } from 'src/app/shared/models/Equipment';
 
@@ -7,19 +8,25 @@ import { Equipment } from 'src/app/shared/models/Equipment';
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
+
 })
 export class HomeComponent implements OnInit {
 
   equipments: Equipment[] = [];
 
   constructor(private equipmentService: EquipmentService, activatedRoute: ActivatedRoute) {
+    let equipmentsObservable: Observable<Equipment[]>;
     activatedRoute.params.subscribe((params) => {
       if (params.searchTerm)
-        this.equipments = this.equipmentService.getAllEquipmentsBySearchTerm(params.searchTerm);
+        equipmentsObservable = this.equipmentService.getAllEquipmentsBySearchTerm(params.searchTerm);
       else if (params.tag)
-        this.equipments = this.equipmentService.getAllEquipmentsByTag(params.tag)
+        equipmentsObservable = this.equipmentService.getAllEquipmentsByTag(params.tag)
       else
-        this.equipments = equipmentService.getAll();
+        equipmentsObservable = equipmentService.getAll();
+
+      equipmentsObservable.subscribe((serverEquipments) => {
+        this.equipments = serverEquipments;
+      })
     })
   }
 

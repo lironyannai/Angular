@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EquipmentService } from 'src/app/services/equipment.service';
-import { Tag } from 'src/app/shared/models/Tags';
+import { Tag } from 'src/app/shared/models/Tag';
 
 @Component({
   selector: 'app-tags',
@@ -9,9 +9,10 @@ import { Tag } from 'src/app/shared/models/Tags';
 })
 export class TagsComponent implements OnInit {
   tags?: Tag[];
-
   constructor(equipmentService: EquipmentService) {
-    this.tags = equipmentService.getAllTags();
+    equipmentService.getAllTags().subscribe(serverTags => {
+      this.tags = serverTags;
+    });
   }
 
   ngOnInit(): void {

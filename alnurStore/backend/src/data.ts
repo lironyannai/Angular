@@ -1,7 +1,7 @@
-import { Equipment } from './app/shared/models/Equipment';
-import { Tag } from './app/shared/models/Tag';
+//import { Equipment } from './app/shared/models/Equipment';
+//import { Tag } from './app/shared/models/Tag';
 
-export const sample_equipments: Equipment[] = [
+export const sample_equipments: any[] = [
     {
         id: '1',
         name: 'Powder Extinguisher 1 Kg',
@@ -136,7 +136,7 @@ export const sample_equipments: Equipment[] = [
         tags: ["Factories", "6 Kg", "6 Liter", "Electornics Devices"],
     }]
 
-export const sample_tags: Tag[] = [
+export const sample_tags: any[] = [
     { name: 'All', count: 12 },
     { name: 'Powder', count: 4 },
     { name: 'Carbon', count: 3 },
