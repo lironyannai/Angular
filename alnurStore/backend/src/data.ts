@@ -147,6 +147,23 @@ export const sample_tags: any[] = [
     { name: 'Factories', count: 5 },
     { name: 'Electornics Devices', count: 4 },
     { name: 'Houses & Buildings', count: 7 },
-
-
 ]
+
+
+export const sample_users: any[] = [
+    {
+        name: "Liron Yannai",
+        email: "liron@gmail.com",
+        password: "12345",
+        address: "Yokneam",
+        isAdmin: true,
+    },
+    {
+        name: "Shmulik Almani",
+        email: "Shmulik@gmail.com",
+        password: "12345",
+        address: "Haifa",
+        isAdmin: false,
+    },
+];
+

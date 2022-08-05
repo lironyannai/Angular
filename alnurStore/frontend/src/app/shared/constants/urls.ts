@@ -7,6 +7,9 @@ export const EQUIPMENTS_BY_TAGS_URL = EQUIPMENTS_URL + '/tag/';
 export const EQUIPMENTS_BY_ID_URL = EQUIPMENTS_URL + '/';
 
 
+export const USER_LOGIN_URL = BASE_URL + '/api/users/login';
+
+
 
 
 
