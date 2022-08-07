@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import { sample_equipments, sample_users } from "./data";
 import jwt from "jsonwebtoken";
+import equipmentRouter from './routers/equipment.router'
 
 const app = express();
 //localhost:4200
@@ -14,34 +15,8 @@ app.use(cors({
     origin: ["http://localhost:4200"]
 }));
 
-app.get("/api/equipments", (req, res) => {
-    res.send(sample_equipments);
-})
 
-app.get("/api/equipments/search/:searchTerm", (req, res) => {
-    const searchTerm = req.params.searchTerm;
-    const equipments = sample_equipments.filter(equipment => equipment.name.toLowerCase().includes(searchTerm.toLowerCase()));
-    res.send(equipments);
-
-})
-
-app.get("/api/equipments/tags", (req, res) => {
-    res.send(sample_equipments);
-})
-
-app.get("/api/equipments/tag/:tagName", (req, res) => {
-    const tagName = req.params.tagName;
-    const equipments = sample_equipments
-        .filter(equipment => equipment.tags?.includes(tagName));
-    res.send(equipments);
-})
-
-app.get("/api/equipments/:equipmentId", (req, res) => {
-    const equipmentId = req.params.equipmentId;
-    const equipment = sample_equipments.find(equipment => equipment.id == equipmentId);
-    res.send(equipment);
-})
-
+app.use("/api/equipments", equipmentRouter);
 app.post("/api/users/login", (req, res) => {
     const { email, password } = req.body;
     const user = sample_users.find(user => user.email === email
