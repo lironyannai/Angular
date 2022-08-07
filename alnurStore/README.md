@@ -138,7 +138,21 @@
     1. Add Register api
     2. Add Register service method
     3. Add Register link
-    4. Add Register Component                       
+    4. Add Register Component   
+
+16. Loading!
+    1. Add Image
+    2. Add Component
+    3. Add Service
+    4. Add Interceptor    
+
+17. Checkout Page
+    1. Create Order Model
+    2. Create Checkout Page Component
+        1. Add To Router
+    3. Add User to User Service
+    4. Add Cart to Cart Service
+    5. Create Order Items List Component                            
 
     
 
