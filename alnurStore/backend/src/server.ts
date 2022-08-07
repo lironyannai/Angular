@@ -1,8 +1,14 @@
+import dotenv from 'dotenv'
+dotenv.config();
+
+
+
 import express from "express";
 import cors from "cors";
-import { sample_equipments, sample_users } from "./data";
-import jwt from "jsonwebtoken";
-import equipmentRouter from './routers/equipment.router'
+import equipmentRouter from './routers/equipment.router';
+import userRouter from "./routers/user.router";
+import { dbConnect } from './configs/database.config';
+dbConnect();
 
 const app = express();
 //localhost:4200
@@ -17,29 +23,8 @@ app.use(cors({
 
 
 app.use("/api/equipments", equipmentRouter);
-app.post("/api/users/login", (req, res) => {
-    const { email, password } = req.body;
-    const user = sample_users.find(user => user.email === email
-        && user.password === password);
+app.use("/api/users", userRouter);
 
-    if (user) {
-        res.send(generateTokenResponse(user));
-    } else {
-        res.status(400).send("User name or Password is not valid!");
-    }
-})
-
-const generateTokenResponse = (user: any) => {
-    const token = jwt.sign({
-        email: user.email, isAdmin: user.isAdmin
-    }, "SomeRandomText", {
-        expiresIn: "30d"
-    });
-
-    user.token = token;
-    return user;
-
-}
 
 const port = 8000;
 app.listen(port, () => {
