@@ -148,5 +148,4 @@ export const sample_tags: Tag[] = [
     { name: 'Electornics Devices', count: 4 },
     { name: 'Houses & Buildings', count: 7 },
 
-
 ]
