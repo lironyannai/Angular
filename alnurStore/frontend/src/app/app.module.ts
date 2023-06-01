@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/partials/header/header.component';
@@ -26,6 +25,7 @@ import { LoadingComponent } from './components/partials/loading/loading.componen
 import { LoadingInterceptor } from './shared/interceptors/loading.interceptor';
 import { CheckoutPageComponent } from './components/pages/checkout-page/checkout-page.component';
 import { OrderItemsListComponent } from './components/partials/order-items-list/order-items-list.component';
+import { MapComponent } from './components/partials/map/map.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +46,8 @@ import { OrderItemsListComponent } from './components/partials/order-items-list/
     RegisterPageComponent,
     LoadingComponent,
     CheckoutPageComponent,
-    OrderItemsListComponent
+    OrderItemsListComponent,
+    MapComponent,
   ],
   imports: [
     BrowserModule,

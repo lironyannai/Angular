@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CheckoutPageComponent } from './checkout-page.component';
+import { MapComponent } from './map.component';
 
-describe('CheckoutPageComponent', () => {
-  let component: CheckoutPageComponent;
-  let fixture: ComponentFixture<CheckoutPageComponent>;
+describe('MapComponent', () => {
+  let component: MapComponent;
+  let fixture: ComponentFixture<MapComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CheckoutPageComponent ]
+      declarations: [ MapComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(CheckoutPageComponent);
+    fixture = TestBed.createComponent(MapComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

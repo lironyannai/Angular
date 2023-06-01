@@ -30,7 +30,7 @@ export class UserService {
           this.setUserToLocalStorage(user);
           this.userSubject.next(user);
           this.toastrService.success(
-            `Welcome to Alnur WebSite Store ${user.name}!`,
+            `Welcome to Alnur WebSite ${user.name}!`,
             'Login Successful'
           )
         },
